@@ -1,0 +1,17 @@
+@use "../sass/variables" as v;
+
+.heading {
+  font-family: v.$heading-font;
+}
+.primary {
+  color: v.$primary-color;
+}
+.secondary {
+  color: v.$secondary-color;
+}
+.warning {
+  color: v.$warning-color;
+}
+.danger {
+  color: v.$danger-color;
+}

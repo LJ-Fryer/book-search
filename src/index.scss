@@ -2,32 +2,11 @@
 
 * {
   box-sizing: border-box;
-}
-a {
-  text-decoration: none;
-  color: #2e2e2e;
-  &:hover {
-    color: orangered;
-  }
-}
-
-body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  min-width: 320px;
-  min-height: 100vh;
-  font-family: system-ui, sans-serif;
-  text-align: center;
 }
 
 //   color-scheme: light dark;
-//   color: rgba(255, 255, 255, 0.87);
-//   background-color: #242424;
 
 // button {
 //   border-radius: 8px;
