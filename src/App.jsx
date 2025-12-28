@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import Form from "./components/Form/Form";
+import { getAllBooks } from "./services/googleBooks";
 import "./App.scss";
 
 function App() {
   const [query, setQuery] = useState("");
+  const [books, setBooks] = useState([]);
+  const [error, setError] = useState(null);
+  const [fetchStatus, setFetchStatus] = useState("PENDING");
 
   const handleInputChange = (e) => {
     setQuery(e.target.value);
@@ -15,6 +19,21 @@ function App() {
     setQuery(query);
     console.log("query: ", query);
   };
+
+  useEffect(() => {
+    setFetchStatus("LOADING");
+    getAllBooks()
+      .then((b) => {
+        console.log(b.items);
+        setBooks(b);
+        setFetchStatus("SUCCESS");
+      })
+      .catch((e) => {
+        setError(e);
+        setFetchStatus("FAILURE");
+      });
+  }, []);
+
   return (
     <div className="app">
       <Header />
