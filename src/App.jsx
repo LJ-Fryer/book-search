@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import Form from "./components/Form/Form";
+import Books from "./components/Books/Books";
 import { getAllBooks } from "./services/googleBooks";
 import "./App.scss";
 
@@ -25,7 +26,7 @@ function App() {
     getAllBooks()
       .then((b) => {
         console.log(b.items);
-        setBooks(b);
+        setBooks(b.items);
         setFetchStatus("SUCCESS");
       })
       .catch((e) => {
@@ -42,6 +43,7 @@ function App() {
         onSubmit={handleSubmit}
         query={query}
       />
+      <Books books={books} />
     </div>
   );
 }

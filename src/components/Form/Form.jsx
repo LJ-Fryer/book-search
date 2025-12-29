@@ -1,8 +1,9 @@
 import { useState } from "react";
+import classes from "./Form.module.scss";
 
 const Form = ({ onSubmit, query, onInputChange }) => {
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} className={classes.form}>
       <div className="input_container"></div>
       <input
         type="text"
