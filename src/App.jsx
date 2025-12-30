@@ -15,17 +15,16 @@ function App() {
     setQuery(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setQuery(query);
-    console.log("query: ", query);
+    const results = await getAllBooks(query);
+    setBooks(results);
   };
 
   useEffect(() => {
     setFetchStatus("LOADING");
     getAllBooks()
       .then((b) => {
-        console.log(b.items);
         setBooks(b.items);
         setFetchStatus("SUCCESS");
       })
@@ -34,6 +33,7 @@ function App() {
         setFetchStatus("FAILURE");
       });
   }, []);
+  console.log(query);
 
   return (
     <div className="app">
