@@ -33,7 +33,6 @@ function App() {
         setFetchStatus("FAILURE");
       });
   }, []);
-  console.log(query);
 
   return (
     <div className="app">

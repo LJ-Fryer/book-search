@@ -9,6 +9,7 @@ a {
   }
 }
 .app {
+  min-width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,11 +17,4 @@ a {
   background-color: v.$secondary-color;
   color: v.$primary-color;
 }
-// .app {
-//   width: 100vw;
-//   height: auto;
-//   color: rgba(255, 255, 255, 0.87);
-//   background-color: #242424;
-//   // text-align: center;
-//   font-size: 10px;
-// }
+// background-color: #242424;

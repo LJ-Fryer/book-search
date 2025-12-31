@@ -1,3 +1,4 @@
+import placeholderImage from "../assets/image_placeholder.jpg";
 export const getAllBooks = async (query) => {
   const url = `https://www.googleapis.com/books/v1/volumes?q=${query}`;
   const response = await fetch(`${url}`);
@@ -15,9 +16,7 @@ export const getAllBooks = async (query) => {
       : info.authors.length > 1
       ? info.authors.join(", ")
       : info.authors;
-    const thumbnail =
-      info.imageLinks?.smallThumbnail || "https://placekeanu.com/250/g";
-    console.log(info, "authors: ", authors, thumbnail);
+    const thumbnail = info.imageLinks?.smallThumbnail || placeholderImage;
     return {
       id: item.id,
       title: info.title || "No title available",
@@ -27,5 +26,3 @@ export const getAllBooks = async (query) => {
     };
   });
 };
-
-// console.log("responseData: ", items);
