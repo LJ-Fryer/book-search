@@ -1,17 +1,35 @@
 @use "../../sass/variables" as v;
 
+.flexbox {
+  display: flex;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+}
+
 .heading {
   font-family: v.$heading-font;
 }
-.primary {
+.h1 {
+  font-size: 1rem;
+  text-align: center;
   color: v.$primary-color;
 }
-.secondary {
-  color: v.$secondary-color;
+.h2 {
+  font-size: 0.7rem;
 }
-.warning {
-  color: v.$warning-color;
+.para {
+  font-size: 0.55rem;
 }
-.danger {
-  color: v.$danger-color;
-}
+
+// .primary {
+//   color: v.$primary-color;
+// }
+// .secondary {
+//   color: v.$secondary-color;
+// }
+// .link-hover-color {
+//   color: v.$link-hover-color;
+// }
+// .link-color {
+//   color: v.$link-color;
+// }

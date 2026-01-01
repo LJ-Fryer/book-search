@@ -1,0 +1,13 @@
+@use "../../sass/variables" as v;
+
+.footer {
+  margin: 1rem 0;
+  height: 5vh;
+  font-size: 0.6rem;
+  color: v.$secondary-color;
+
+  .icon {
+    font-size: 0.8rem;
+    opacity: 0.75;
+  }
+}

@@ -1,15 +1,32 @@
+@use "../../sass/variables" as v;
+
 .books {
-  border: 3px solid #fcfcfc;
+  max-width: 90vw;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
 }
 .placeholder_image {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 90%;
+
   img {
     margin: 0 auto;
     width: 100%;
-    border-radius: 0.35em;
-    border: 5px solid transparent;
+    border-radius: 0.4em;
+    box-shadow: -3px 10px 45px -7px rgba(24, 24, 24, 0.68);
+  }
+  .placeholder_caption {
+    margin-top: 0.5rem;
+    padding: 0.1rem 0.2rem;
+    background-color: v.$primary-color;
+    border-radius: 0.2rem;
+    opacity: 0.6;
+    font-size: 0.6rem;
+    color: v.$secondary-color;
   }
 }

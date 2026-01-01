@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { H2 } from "../Headings";
+import { H2, P, Flexbox } from "../Headings";
 import classes from "./BookCard.module.scss";
 
 const BookCard = ({ book }) => {
@@ -8,23 +8,31 @@ const BookCard = ({ book }) => {
   return (
     <article className={classes.card}>
       <H2
-        className={expanded ? classes.expanded : classes.truncated}
+        className={`${classes.card_title} ${
+          expanded ? classes.expanded : classes.truncated
+        }`}
         onClick={() => setExpanded(!expanded)}
       >
         {book.title}
       </H2>
-      <p>{book.authors}</p>
-      <p
-        className={expanded ? classes.expanded : classes.truncated}
-        onClick={() => setExpanded(!expanded)}
-      >
-        {book.description}
-      </p>
-      <img
-        className={classes.card_image}
-        src={book.thumbnail}
-        alt={book.title}
-      />
+      <Flexbox>
+        <div className={classes.image_box}>
+          <img
+            className={classes.book_image}
+            src={book.thumbnail}
+            alt={book.title}
+          />
+        </div>
+        <div className={classes.info_box}>
+          <P className={classes.authors}>{book.authors}</P>
+          <P
+            className={expanded ? classes.expanded : classes.truncated}
+            onClick={() => setExpanded(!expanded)}
+          >
+            {book.description}
+          </P>
+        </div>
+      </Flexbox>
     </article>
   );
 };

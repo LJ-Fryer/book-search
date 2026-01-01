@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import Form from "./components/Form/Form";
 import Books from "./components/Books/Books";
+import Footer from "./components/Footer/Footer";
+
 import { getAllBooks } from "./services/googleBooks";
 import "./App.scss";
 
@@ -43,6 +45,7 @@ function App() {
         query={query}
       />
       <Books books={books} />
+      <Footer />
     </div>
   );
 }

@@ -1,9 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rammetto+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
-$primary-color: #fdede6;
-$secondary-color: #215273;
-$warning-color: #d3de17;
-$danger-color: #ff7b17;
+$primary-color: #eaeaea;
+$secondary-color: #212121;
+$background-gradient: radial-gradient(
+  circle,
+  rgba(77, 168, 159, 1) 15%,
+  rgba(33, 81, 115, 1) 76%
+);
+$link-color: #28068f;
+$link-hover-color: #f60707;
 
-$heading-font: "Rammetto One", sans-serif;
-$text-font: "Open Sans", sans-serif;
+$heading-font: "Playfair Display", serif;
+$text-font: "Figtree", sans-serif;

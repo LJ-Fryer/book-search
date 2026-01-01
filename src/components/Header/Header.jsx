@@ -5,7 +5,7 @@ import { H1 } from "../Headings";
 const Header = () => {
   return (
     <div className={classes.header}>
-      <H1>We're going on a Book Hunt</H1>
+      <H1>Dive into your next book</H1>
     </div>
   );
 };

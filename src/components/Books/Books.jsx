@@ -6,9 +6,25 @@ import classes from "./Books.module.scss";
 const Books = ({ books }) => {
   if (!books) {
     return (
-      <div className={classes.placeholder_image}>
+      <figure className={classes.placeholder_image}>
         <img src={loadImage} alt="Search for a book" />
-      </div>
+        <figcaption className={classes.placeholder_caption}>
+          Photo by{" "}
+          <a
+            href="https://unsplash.com/@jonasjacobsson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            target="_blank"
+          >
+            Jonas Jacobsson
+          </a>{" "}
+          on{" "}
+          <a
+            href="https://unsplash.com/photos/bokeh-photography-of-open-book-0FRJ2SCuY4k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            target="_blank"
+          >
+            Unsplash
+          </a>
+        </figcaption>
+      </figure>
     );
   } else
     return (

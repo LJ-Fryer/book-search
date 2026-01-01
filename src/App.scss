@@ -2,11 +2,15 @@
 
 a {
   text-decoration: none;
-  color: #2e2e2e;
-  &:hover {
+  color: v.$link-color;
+  :hover {
     text-decoration: none;
-    color: orangered;
+    color: white;
+    transform: scale(1.2);
   }
+}
+.app > * {
+  margin-top: 0.75rem;
 }
 .app {
   min-width: 100vw;
@@ -14,7 +18,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: v.$secondary-color;
+  font-family: v.$text-font;
+  background: v.$background-gradient;
   color: v.$primary-color;
 }
-// background-color: #242424;
