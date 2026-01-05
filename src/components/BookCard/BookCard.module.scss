@@ -8,6 +8,16 @@
   border-radius: 0.2em;
   font-size: 0.6em;
 
+  .heading {
+    padding: 0.5em;
+    border-radius: 0.25em;
+    text-shadow: v.$text-shadow;
+  }
+  .faded {
+    opacity: 0.7;
+    text-transform: capitalize;
+  }
+
   .truncated {
     display: -webkit-box;
     -webkit-line-clamp: 2;

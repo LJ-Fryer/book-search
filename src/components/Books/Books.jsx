@@ -4,9 +4,10 @@ import BookCard from "../BookCard/BookCard";
 import classes from "./Books.module.scss";
 
 const Books = ({ books }) => {
-  if (!books) {
+  console.log("books.length: ", books.length);
+  if (!books || books.length === 0) {
     return (
-      <figure className={classes.placeholder_image}>
+      <figure className={classes.load_image}>
         <img src={loadImage} alt="Search for a book" />
         <figcaption className={classes.placeholder_caption}>
           Photo by{" "}

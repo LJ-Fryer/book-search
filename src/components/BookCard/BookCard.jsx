@@ -4,16 +4,19 @@ import classes from "./BookCard.module.scss";
 
 const BookCard = ({ book }) => {
   const [expanded, setExpanded] = useState(false);
-  // Each book in the grid should have an image, author, title and description
   return (
     <article className={classes.card}>
       <H2
-        className={`${classes.card_title} ${
+        className={`${classes.heading} ${
           expanded ? classes.expanded : classes.truncated
         }`}
         onClick={() => setExpanded(!expanded)}
       >
-        {book.title}
+        {book.title ? (
+          book.title
+        ) : (
+          <span className={classes.faded}>Title unavailable</span>
+        )}
       </H2>
       <Flexbox>
         <div className={classes.image_box}>
@@ -24,12 +27,22 @@ const BookCard = ({ book }) => {
           />
         </div>
         <div className={classes.info_box}>
-          <P className={classes.authors}>{book.authors}</P>
+          <P className={classes.authors}>
+            {book.authors ? (
+              book.authors
+            ) : (
+              <span className={classes.faded}>Author uavailable</span>
+            )}
+          </P>
           <P
             className={expanded ? classes.expanded : classes.truncated}
             onClick={() => setExpanded(!expanded)}
           >
-            {book.description}
+            {book.description ? (
+              book.description
+            ) : (
+              <span className={classes.faded}>Description unavailable</span>
+            )}
           </P>
         </div>
       </Flexbox>
