@@ -9,7 +9,7 @@
   color: v.$primary-color;
 }
 .h2 {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   text-transform: capitalize;
 }
 .para {
@@ -18,20 +18,23 @@
 
 @media (min-width: 577px) {
   .h1 {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
   .h2 {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   .para {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
   }
 }
 @media (min-width: 769px) {
+  .h1 {
+    font-size: 2.25rem;
+  }
   .h2 {
-    font-size: 0.85rem;
+    font-size: 1.25rem;
   }
   .para {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 }
