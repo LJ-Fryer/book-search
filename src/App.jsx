@@ -26,7 +26,13 @@ function App() {
         onSubmit={handleSubmit}
         query={query}
       />
+
       {fetchStatus === "LOADING" && <P>Loading...</P>}
+      {fetchStatus === "SUCCESS" && (
+        <P>
+          Search results for ... <strong>"{query}"</strong>
+        </P>
+      )}
       {fetchStatus !== "FAILURE" && <Books books={books} />}
       {fetchStatus == "FAILURE" && (
         <P style={{ color: "red" }}>{error.message}</P>

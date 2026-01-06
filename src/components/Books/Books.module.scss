@@ -31,3 +31,15 @@
     color: v.$secondary-color;
   }
 }
+
+@media (min-width: 769px) {
+  .books {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.75rem;
+  }
+}
+@media (min-width: 1025px) {
+  .books {
+    max-width: 950px;
+  }
+}

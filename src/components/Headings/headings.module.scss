@@ -22,15 +22,22 @@
   font-size: 0.55rem;
 }
 
-// .primary {
-//   color: v.$primary-color;
-// }
-// .secondary {
-//   color: v.$secondary-color;
-// }
-// .link-hover-color {
-//   color: v.$link-hover-color;
-// }
-// .link-color {
-//   color: v.$link-color;
-// }
+@media (min-width: 577px) {
+  .h1 {
+    font-size: 1.75rem;
+  }
+  .h2 {
+    font-size: 0.75rem;
+  }
+  .para {
+    font-size: 0.65rem;
+  }
+}
+@media (min-width: 769px) {
+  .h2 {
+    font-size: 0.85rem;
+  }
+  .para {
+    font-size: 0.75rem;
+  }
+}
