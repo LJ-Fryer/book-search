@@ -33,7 +33,8 @@ function App() {
           Search results for ... <strong>"{query}"</strong>
         </P>
       )}
-      {fetchStatus !== "FAILURE" && <Books books={books} />}
+      {fetchStatus === "SUCCESS" && <Books books={books} />}
+      {fetchStatus === "PENDING" && <Books books={[]} />}
       {fetchStatus == "FAILURE" && (
         <P style={{ color: "red" }}>{error.message}</P>
       )}
