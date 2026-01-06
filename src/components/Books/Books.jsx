@@ -9,7 +9,7 @@ const Books = ({ books }) => {
     return (
       <figure className={classes.load_image}>
         <img src={loadImage} alt="Search for a book" />
-        <figcaption className={classes.placeholder_caption}>
+        <figcaption className={classes.load_caption}>
           Photo by{" "}
           <a
             href="https://unsplash.com/@jonasjacobsson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"

@@ -3,11 +3,12 @@
 .footer {
   margin: 1rem 0;
   height: 5vh;
-  font-size: 0.6rem;
-  color: v.$secondary-color;
+  font-size: 0.75rem;
+  color: v.$primary-color;
+  opacity: 0.75;
 
   .icon {
     font-size: 0.8rem;
-    opacity: 0.75;
+    opacity: 1;
   }
 }

@@ -5,7 +5,7 @@ a {
   color: v.$link-color;
   :hover {
     text-decoration: none;
-    color: white;
+    color: v.$link-hover-color;
     transform: scale(1.2);
   }
 }
