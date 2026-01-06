@@ -1,11 +1,5 @@
 @use "../../sass/variables" as v;
 
-.flexbox {
-  display: flex;
-  margin-top: 0.5rem;
-  gap: 0.5rem;
-}
-
 .heading {
   font-family: v.$heading-font;
 }

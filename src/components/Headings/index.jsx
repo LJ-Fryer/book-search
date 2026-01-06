@@ -1,9 +1,5 @@
 import classes from "./headings.module.scss";
 
-export const Flexbox = ({ children }) => {
-  return <div className={classes.flexbox}>{children}</div>;
-};
-
 export const H1 = ({ color, children, className, ...rest }) => {
   return (
     <h1

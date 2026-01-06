@@ -1,4 +1,5 @@
 @use "../../sass/variables" as v;
+@import "../../sass/mixins";
 
 .card {
   padding: 0.5rem;
@@ -7,6 +8,12 @@
   box-shadow: -3px 10px 45px -7px rgba(24, 24, 24, 0.68);
   border-radius: 0.2em;
   font-size: 0.6em;
+
+  .bookcard {
+    @include flex(row, flex-start, flex-start);
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+  }
 
   .heading {
     padding: 0.5em;
@@ -27,9 +34,7 @@
     cursor: pointer;
   }
   .info_box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    @include flex(column, space-around, flex-start);
   }
   .book_image {
     width: 2rem;

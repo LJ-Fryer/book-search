@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { H2, P, Flexbox } from "../Headings";
+import { H2, P } from "../Headings";
 import classes from "./BookCard.module.scss";
 
 const BookCard = ({ book }) => {
@@ -18,7 +18,8 @@ const BookCard = ({ book }) => {
           <span className={classes.faded}>Title unavailable</span>
         )}
       </H2>
-      <Flexbox>
+
+      <div className={classes.bookcard}>
         <div className={classes.image_box}>
           <img
             className={classes.book_image}
@@ -45,7 +46,7 @@ const BookCard = ({ book }) => {
             )}
           </P>
         </div>
-      </Flexbox>
+      </div>
     </article>
   );
 };

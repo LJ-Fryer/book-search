@@ -9,7 +9,7 @@ const Form = ({ onSubmit, query, onInputChange }) => {
         name="userQuery"
         id="userInput"
         value={query}
-        placeholder="Enter a book title..."
+        placeholder="Book title, author..."
         onChange={onInputChange}
       />
       <button type="submit">Search</button>
