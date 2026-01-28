@@ -6,7 +6,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
-    <div className={classes.footer}>
+    <footer className={classes.footer}>
       <P>
         Project code at{" "}
         <a
@@ -16,7 +16,7 @@ const Footer = () => {
           <FontAwesomeIcon icon={faGithub} className={classes.icon} />
         </a>
       </P>
-    </div>
+    </footer>
   );
 };
 

@@ -32,20 +32,24 @@ const BookCard = ({ book }) => {
             {book.authors ? (
               book.authors
             ) : (
-              <span className={classes.faded}>Author uavailable</span>
-            )}
-          </P>
-          <P
-            className={expanded ? classes.expanded : classes.truncated}
-            onClick={() => setExpanded(!expanded)}
-          >
-            {book.description ? (
-              book.description
-            ) : (
-              <span className={classes.faded}>Description unavailable</span>
+              <P className={`${classes.faded}, ${classes.authors}`}>
+                Author uavailable
+              </P>
             )}
           </P>
         </div>
+      </div>
+      <div className={classes.card_btm}>
+        <P
+          className={expanded ? classes.expanded : classes.truncated}
+          onClick={() => setExpanded(!expanded)}
+        >
+          {book.description ? (
+            book.description
+          ) : (
+            <P className={classes.faded}>Description unavailable</P>
+          )}
+        </P>
       </div>
     </article>
   );
